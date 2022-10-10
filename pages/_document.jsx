@@ -24,7 +24,7 @@ class MyDocument extends Document {
             <Html lang='pt-br'>
                 <Head>
                     <meta charSet='utf-8' />
-                    <link rel="icon" href="images/logoAga.svg" />
+                    <link rel="icon" href="images/favicon.png" />
                 </Head>
                 <body>
                     <Main />
