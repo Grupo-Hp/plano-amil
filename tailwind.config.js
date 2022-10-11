@@ -9,8 +9,11 @@ module.exports = {
       colors: {
         primary: '#4624fb',
         secondary: '#29204b'
-      }
-    },
+      },
+      fontSize: {
+        super: '12rem'
+      },
+    }
   },
   plugins: [],
 }
