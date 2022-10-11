@@ -8,7 +8,7 @@ export default function Nav() {
     return (
         <>
             <div className="shadow-sm py-1 w-full bg-white z-50 border-b-4" id="home">
-                <div className="w-full mx-auto">
+                <div className="w-10/12 mx-auto">
                     <div className="flex items-center h-20 w-full">
                         <div className="flex items-center mx-20 justify-between w-full">
                             <div className="flex">
@@ -21,7 +21,7 @@ export default function Nav() {
 
                                 /></a>
                             </div>
-                            <div className="hidden md:block">
+                            <div className="hidden xl:block">
                                 <div className="ml-10 flex items-baseline space-x-10 uppercase">
                                     <Link
 
@@ -29,7 +29,7 @@ export default function Nav() {
                                         smooth={true}
                                         offset={50}
                                         duration={1000}
-                                        className=' font-medium hover:text-sky-400 cursor-pointer text-slate-800'
+                                        className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         inicio
                                     </Link>
@@ -39,7 +39,7 @@ export default function Nav() {
                                         smooth={true}
                                         offset={50}
                                         duration={1000}
-                                        className=' font-medium hover:text-sky-400 cursor-pointer text-slate-800'
+                                        className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano individual
                                     </Link>
@@ -49,7 +49,7 @@ export default function Nav() {
                                         smooth={true}
                                         offset={50}
                                         duration={1000}
-                                        className=' font-medium hover:text-sky-400 cursor-pointer text-slate-800'
+                                        className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano familiar
                                     </Link>
@@ -59,7 +59,7 @@ export default function Nav() {
                                         smooth={true}
                                         offset={50}
                                         duration={1000}
-                                        className=' font-medium hover:text-sky-400 cursor-pointer text-slate-800'
+                                        className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano empresarial
                                     </Link>
@@ -69,14 +69,14 @@ export default function Nav() {
                                         smooth={true}
                                         offset={50}
                                         duration={1000}
-                                        className=' font-medium hover:text-sky-400 cursor-pointer text-slate-800'
+                                        className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         preço rapido
                                     </Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="mr-10 flex md:hidden ">
+                        <div className="mr-10 flex xl:hidden ">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
@@ -144,7 +144,7 @@ export default function Nav() {
                                     smooth={true}
                                     offset={50}
                                     duration={1000}
-                                    className=" cursor-pointer hover:bg-sky-400 text-white block px-3 py-2 text-base font-medium"
+                                    className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
                                     inicio
                                 </Link>
@@ -154,7 +154,7 @@ export default function Nav() {
                                     smooth={true}
                                     offset={50}
                                     duration={1000}
-                                    className=" cursor-pointer hover:bg-sky-400 text-white block px-3 py-2 text-base font-medium"
+                                    className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
                                     plano individual
                                 </Link>
@@ -164,7 +164,7 @@ export default function Nav() {
                                     smooth={true}
                                     offset={50}
                                     duration={1000}
-                                    className=" cursor-pointer hover:bg-sky-400 text-white block px-3 py-2 text-base font-medium"
+                                    className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
                                     plano familiar
                                 </Link>
@@ -174,7 +174,7 @@ export default function Nav() {
                                     smooth={true}
                                     offset={50}
                                     duration={1000}
-                                    className=" cursor-pointer hover:bg-sky-400 text-white block px-3 py-2 text-base font-medium"
+                                    className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
                                     plano empresarial
                                 </Link>
@@ -184,7 +184,7 @@ export default function Nav() {
                                     smooth={true}
                                     offset={50}
                                     duration={1000}
-                                    className=" cursor-pointer hover:bg-sky-400 text-white block px-3 py-2 text-base font-medium"
+                                    className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
                                     preço rapido
                                 </Link>
