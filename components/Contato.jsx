@@ -34,7 +34,7 @@ export default function Contato() {
     }
 
     return (
-        <div id='contato' className='bg-primary p-8'>
+        <div id='contato' className='p-8 contatoImage1'>
             <div className="mx-auto grid grid-cols-2 lg:w-10/12">
                 <div className="text-center sm:w-2/3 m-auto col-span-2 lg:col-span-1 text-white">
                     <h2 className='text-4xl font-bold mb-10 '>A Amil tem o plano certo para você viver o seu melhor.</h2>
