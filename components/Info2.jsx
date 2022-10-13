@@ -14,8 +14,7 @@ export default function Info2() {
                         <a href="#" className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">receber tabela de preços</a>
                     </div>
                 </div>
-                <Image src='/images/testeimage.jpg' width={500} height={300} />
-                <Image src='/images/testeimage.jpg' width={500} height={300} />
+                IMAGEM
             </div>
         </div >
     )
