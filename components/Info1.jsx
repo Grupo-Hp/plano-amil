@@ -14,8 +14,8 @@ export default function Info1() {
                     <h1 className="text-3xl mt-10 font-light lg:text-left">Planos á partir de</h1>
 
                     <div className="text-primary font-bold text-center">
-                        <span className="text-3xl">R$</span><span className="text-super">145</span>
-                        <span className="relative bottom-28 text-3xl">,00</span>
+                        <span className="text-3xl">R$</span><span className="text-9xl sm:text-super">145</span>
+                        <span className="relative bottom-16 sm:bottom-28 text-3xl">,00</span>
                     </div>
 
                     <p className="text-3xl font-light lg:text-end mb-5 lg:pr-3">Economize até 40% </p>
