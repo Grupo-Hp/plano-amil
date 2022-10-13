@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { Link } from "react-scroll";
 
 export default function Info2() {
     return (
@@ -11,7 +12,14 @@ export default function Info2() {
                         Desconto especial para novos clientes e cotação online com nossa equipe.
                     </p>
                     <div className="my-16">
-                        <a href="#" className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">receber tabela de preços</a>
+                        <Link
+
+                            to="contato"
+                            smooth={true}
+                            offset={50}
+                            duration={1000}
+                            className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">receber tabela de preços
+                        </Link>
                     </div>
                 </div>
                 IMAGEM

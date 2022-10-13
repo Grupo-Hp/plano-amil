@@ -23,46 +23,26 @@ export default function Nav() {
                             </div>
                             <div className="hidden xl:block">
                                 <div className="ml-10 flex items-baseline space-x-10 uppercase">
-                                    <Link
-
-                                        to="portfolio"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={1000}
+                                    <a href="./contato"
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         inicio
-                                    </Link>
-                                    <Link
-
-                                        to="quemSomos"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={1000}
+                                    </a>
+                                    <a href="./contato"
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano individual
-                                    </Link>
-                                    <Link
-
-                                        to="contato"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={1000}
+                                    </a>
+                                    <a href="./contato"
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano familiar
-                                    </Link>
-                                    <Link
-
-                                        to="contato"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={1000}
+                                    </a>
+                                    <a href="./contato"
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         plano empresarial
-                                    </Link>
+                                    </a>
                                     <Link
 
                                         to="contato"

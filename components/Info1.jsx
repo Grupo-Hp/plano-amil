@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 export default function Info1() {
     return (
@@ -22,7 +23,14 @@ export default function Info1() {
                     <p className="text-center text-gray-600 text-xl">*De 0 à 18 Anos para o Rio de Janeiro</p>
 
                     <div className="mt-10">
-                        <a href="#" className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">preço rápido</a>
+                        <Link
+
+                            to="contato"
+                            smooth={true}
+                            offset={50}
+                            duration={1000}
+                            className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">preço rápido
+                        </Link>
                     </div>
                 </div>
             </div>
