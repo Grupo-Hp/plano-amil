@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Info1() {
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-50">
             <div className="w-10/12 lg:w-8/12 py-16 mx-auto grid grid-cols-2 gap-x-4">
                 <div className="col-span-1">
                 </div>
