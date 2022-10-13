@@ -12,6 +12,12 @@
     background-size: cover;
 }
 
+.contatoImage3{
+    background-image: url('../public/images/imageInfo1.jpg');
+    background-position: right;
+    background-size: cover;
+}
+
 @media screen and (max-width: 750px) {
     .contatoImage1 {
         background-image: url('../public/images/headerMobile.png');
