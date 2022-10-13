@@ -7,6 +7,11 @@
     background-size: cover;
 }
 
+.contatoImage2{
+    background-image: url('../public/images/header.jpg');
+    background-size: cover;
+}
+
 @media screen and (max-width: 750px) {
     .contatoImage1 {
         background-image: url('../public/images/headerMobile.png');

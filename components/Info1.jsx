@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 export default function Info1() {
     return (
         <div className="bg-gray-100">
-            <div className="w-10/12 lg:w-8/12 py-16 mx-auto grid grid-cols-2">
-                <div className="col-span-1"></div>
+            <div className="w-10/12 lg:w-8/12 py-16 mx-auto grid grid-cols-2 gap-x-4">
+                <div className="col-span-1">
+                </div>
                 <div className="col-span-2 lg:col-span-1 text-center ">
 
                     <p className="uppercase border-b-4 pb-2 text-lg border-primary text-center lg:text-left">simulador de planos amil saúde rio</p>

@@ -22,7 +22,7 @@ export default function Contato() {
         e.preventDefault()
 
         try {
-            await fetch('https://api.grupohp.com.br/send', {
+            await fetch('https://api.grupohp.com.br/send/amil', {
                 method: 'POST',
                 body: JSON.stringify(dataForm),
                 headers: { 'Content-Type': 'application/json' }
@@ -70,7 +70,7 @@ export default function Contato() {
 
                             <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="nome" onChange={onChangeInput} value={dataForm.nome} placeholder="Digite seu nome*" />
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="nome" onChange={onChangeInput} value={dataForm.sobrenome} placeholder="Digite seu sobrenome*" />
+                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="sobrenome" onChange={onChangeInput} value={dataForm.sobrenome} placeholder="Digite seu sobrenome*" />
                         </div>
 
 
@@ -83,7 +83,7 @@ export default function Contato() {
 
                             <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="telefone" onChange={onChangeInput} value={dataForm.telefone} placeholder="Digite seu principal telefone*" />
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="telefone" onChange={onChangeInput} value={dataForm.cidade} placeholder="Digite seu principal telefone*" />
+                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="cidade" onChange={onChangeInput} value={dataForm.cidade} placeholder="Digite seu principal telefone*" />
 
                         </div>
 
@@ -91,7 +91,7 @@ export default function Contato() {
 
                             <div className="flex col-span-2 md:col-span-1">
                                 <div className="w-full">
-                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='assunto' value={dataForm.tipo} onChange={onChangeInput}>
+                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='tipo' value={dataForm.tipo} onChange={onChangeInput}>
                                         <option defaultValue>Tipo de Plano:</option>
                                         <option value="Individual/Adesão">Individual ou adesão</option>
                                         <option value="Familiar">Familiar</option>
@@ -102,7 +102,7 @@ export default function Contato() {
                             </div>
                             <div className="flex col-span-2 md:col-span-1">
                                 <div className="mb-3 w-full">
-                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='assunto' value={dataForm.forma} onChange={onChangeInput}>
+                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='forma' value={dataForm.forma} onChange={onChangeInput}>
                                         <option defaultValue>Melhor Forma de Simulação:</option>
                                         <option value="Online">Online</option>
                                         <option value="WhatsApp">WhatsApp</option>
