@@ -20,7 +20,7 @@ export default function Home() {
       <Info2 />
       <Faixa />
       <Info3 />
-      <Contato />
+      <Contato button='enviar' display='hidden' />
       <Footer />
     </Page>
   )

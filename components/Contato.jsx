@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from "next/image";
 
-export default function Contato() {
+export default function Contato(props) {
 
     const [dataForm, setDataForm] = useState({
         empresa: 'Amil',
@@ -34,8 +34,13 @@ export default function Contato() {
     }
 
     return (
-        <div id='contato' className='p-8 contatoImage1'>
+        <div id='contato' className={`p-8 contatoImage1 flex items-center ${props.height}`}>
             <div className="mx-auto grid grid-cols-2 lg:w-10/12">
+                <div className={`col-span-2 mb-28 text-white text-center ${props.display}`}>
+                    <h2 className='text-4xl font-bold mb-5'>Cotação de Planos de Saúde Rio de Janeiro.
+                        Preço na Hora!</h2>
+                    <p className='text-xl'>Todos os planos de saúde amil e simulador de planos de saúde online</p>
+                </div>
                 <div className="text-center sm:w-2/3 m-auto col-span-2 lg:col-span-1 text-white">
                     <h2 className='text-4xl font-bold mb-10 '>A Amil tem o plano certo para você viver o seu melhor.</h2>
                     <p className='text-2xl'>Planos com flexibilidade para o cuidado certo</p>
@@ -83,7 +88,7 @@ export default function Contato() {
 
                             <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="telefone" onChange={onChangeInput} value={dataForm.telefone} placeholder="Digite seu principal telefone*" />
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="cidade" onChange={onChangeInput} value={dataForm.cidade} placeholder="Digite seu principal telefone*" />
+                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="cidade" onChange={onChangeInput} value={dataForm.cidade} placeholder="Digite a cidade onde mora*" />
 
                         </div>
 
@@ -115,8 +120,7 @@ export default function Contato() {
 
 
                         <div className="form-group mb-6">
-                            <button type="submit" className="mt-2 w-full px-6 py-2.5 font-medium text-lg border border-secondary text-secondary hover:text-white rounded-xl bg-white leading-tight uppercase hover:bg-primary-10 hover:bg-secondary transition duration-300 ease-in-out">Enviar</button>
-
+                            <button type="submit" className="mt-2 w-full px-6 py-2.5 font-medium text-lg border border-secondary text-secondary hover:text-white rounded-xl bg-white leading-tight uppercase hover:bg-primary-10 hover:bg-secondary transition duration-300 ease-in-out">{props.button}</button>
                         </div>
                     </form>
                 </div>
