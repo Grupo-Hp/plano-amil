@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 export default function Header() {
     return (
         <div className="contatoImage1 h-[80vh] flex items-center">
-            <div className="grid grid-cols-2 w-10/12 mx-auto">
+            <div className="grid grid-cols-2 w-10/12 mx-auto mt-20 sm:mt-0">
                 <div className="col-span-2 xl:col-span-1 text-white">
                     <h3 className="text-6xl font-light mb-5">Reduza o valor do seu plano de saúde</h3>
                     <p className="text-xl">Em até</p>
