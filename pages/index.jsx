@@ -4,8 +4,10 @@ import Header from '../components/Header'
 import Info1 from '../components/Info1'
 import Cards from '../components/Cards'
 import Info2 from '../components/Info2'
+import Info3 from '../components/Info3'
 import Footer from '../components/Footer'
 import Contato from '../components/Contato'
+import Faixa from '../components/Faixa'
 
 export default function Home() {
 
@@ -16,6 +18,8 @@ export default function Home() {
       <Info1 />
       <Cards />
       <Info2 />
+      <Faixa />
+      <Info3 />
       <Contato />
       <Footer />
     </Page>

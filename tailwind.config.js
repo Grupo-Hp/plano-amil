@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#4624fb',
-        secondary: '#29204b'
+        secondary: '#29204b',
+        blueAmil: '#00adff'
       },
       fontSize: {
         super: '12rem'

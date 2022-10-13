@@ -10,6 +10,9 @@ export default function Info2() {
                     <p className="md:text-xl font-light">Consulte conosco a linha completa Amil Familiar, Adesão, Empresarial e Odontológica.
                         Desconto especial para novos clientes e cotação online com nossa equipe.
                     </p>
+                    <div className="my-16">
+                        <a href="#" className="px-10 cursor-pointer py-3 font-medium text-md border-2 bg-primary hover:bg-white border-primary text-white hover:text-primary rounded-xl uppercase transition duration-300 ease-in-out">receber tabela de preços</a>
+                    </div>
                 </div>
                 <Image src='/images/testeimage.jpg' width={500} height={300} />
                 <Image src='/images/testeimage.jpg' width={500} height={300} />
