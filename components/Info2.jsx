@@ -22,7 +22,13 @@ export default function Info2() {
                         </Link>
                     </div>
                 </div>
-                IMAGEM
+                <Image
+                    src="/images/grupo.png"
+                    //layout='responsive'
+                    width={1000}
+                    height={400}
+                    alt="Imagem de médicos"
+                />
             </div>
         </div >
     )
