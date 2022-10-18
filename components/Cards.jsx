@@ -20,11 +20,11 @@ function Card(props) {
 export default function Cards(props) {
     return (
         <div className="grid grid-cols-3 gap-x-10 gap-y-4 w-11/12 2xl:w-9/12 mx-auto py-36">
-            <Card icon={<MdAttachMoney />} title='valores dos planos de saúde rio de janeiro' info='Nossa equipe fornece os valores de a tabela de preços em minutos para você e sua empresa.' />
+            <Card icon={<MdAttachMoney />} title='valores dos planos de saúde rio de janeiro' info='Nossa equipe fornece a tabela de preços em minutos para você e sua empresa.' />
 
-            <Card icon={<FaRegHospital />} title='veja rede credenciada na sua região' info='Conheça a rede credenciada de sua região e que melhor lhe atende entre as maiores operadoras.' />
+            <Card icon={<FaRegHospital />} title='redes credenciadas' info='Venha conhecer a rede credenciada da sua região.' />
 
-            <Card icon={<ImMobile />} title='suporte 24 horas e atendimento rápido' info='Nosso atendimento reduz o valor do seu plano de saúde. Descubra como reduzir agora.' />
+            <Card icon={<ImMobile />} title='suporte 24 horas e atendimento rápido' info='Nós reduzimos o valor do seu plano de saúde.' />
 
         </div>
     )

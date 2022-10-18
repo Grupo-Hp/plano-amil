@@ -17,7 +17,7 @@ export default function Info1() {
                     </div>
 
                     <p className="text-3xl font-light lg:text-end mb-5 lg:pr-3">Economize até 40% </p>
-                    <p className="text-center text-gray-600 text-xl">Valores para o plano de saúde na linha empresarial Amil fácil.</p>
+                    <p className="text-center text-gray-600 text-xl">Valores para o plano de saúde na linha empresarial Amil Fácil.</p>
                     <p className="text-center text-gray-600 text-xl">*De 0 à 18 Anos para o Rio de Janeiro</p>
 
                     <div className="mt-10">

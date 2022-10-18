@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import Image from 'next/image';
 
 export default function Header() {
     return (
@@ -12,7 +11,6 @@ export default function Header() {
                     <div className="grid sm:flex gap-x-4 text-center">
                         <a href="./contato" className="mt-2 px-10 cursor-pointer py-3 font-medium text-md border-2 border-secondary text-secondary hover:text-white rounded-xl bg-yellow-500 leading-tight uppercase hover:bg-secondary transition duration-300 ease-in-out">simulador online</a>
                         <Link
-
                             to="contato"
                             smooth={true}
                             offset={50}
