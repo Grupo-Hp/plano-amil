@@ -51,7 +51,7 @@ export default function Nav() {
                                         duration={1000}
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
-                                        preço rapido
+                                        preço rápido
                                     </Link>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@ export default function Nav() {
                                     duration={1000}
                                     className=" cursor-pointer hover:bg-primary text-white block px-3 py-2 text-base font-medium"
                                 >
-                                    preço rapido
+                                    preço rápido
                                 </Link>
                             </div>
                         </div>
