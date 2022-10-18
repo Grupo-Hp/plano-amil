@@ -6,24 +6,35 @@
 @tailwind components;
 @tailwind utilities;
 
-.contatoImage1{
-    background-image: url('../public/images/header.jpg');
+.headerImage1 {
+    background-image: url('../public/images/header.png');
     background-size: cover;
 }
 
-.contatoImage2{
-    background-image: url('../public/images/header.jpg');
+.contatoImage1 {
+    background-image: url('../public/images/header1.jpg');
     background-size: cover;
 }
 
-.contatoImage3{
+.contatoImage2 {
+    background-image: url('../public/images/header1.jpg');
+    background-size: cover;
+}
+
+.contatoImage3 {
     background-image: url('../public/images/imageInfo1.jpg');
     background-position: right;
     background-size: cover;
 }
 
 @media screen and (max-width: 750px) {
-    .contatoImage1 {
+    .headerImage1 {
         background-image: url('../public/images/headerMobile.png');
     }
-  }
+}
+
+@media screen and (max-width: 1280px) {
+    .headerImage1 {
+        background-image: url('../public/images/header1.jpg');
+    }
+}
