@@ -68,7 +68,7 @@ export default function Contato(props) {
                 </div>
                 <div className="col-span-2 lg:col-span-1">
                     <h4 className='text-4xl font-bold text-white pb-3 text-center'>Preço Rápido</h4>
-                    <p className='text-xl font-bold text-white text-center mb-5'>Estamos dispostos a mostar os valores dos Planos de Saúde na palma da sua mão em minutos.</p>
+                    <p className='text-xl font-bold text-white text-center mb-5'>Estamos dispostos a mostrar os valores dos Planos de Saúde na palma da sua mão em minutos.</p>
                     <form onSubmit={sendContact}>
 
                         <div className="form-group mb-6 grid grid-cols-2 gap-4">

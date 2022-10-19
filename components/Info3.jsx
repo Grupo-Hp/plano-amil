@@ -21,7 +21,7 @@ export default function Info3() {
                 <p className='text-gray-600'>Temos uma equipe treinada com mais de 10 anos de experiência e te ajudamos a escolher o plano de saúde perfeito.</p>
                 <div className="grid grid-cols-2 gap-4">
                     <Card title='PLANO DE SAÚDE EMPRESARIAL' info='Planos empresariais que cabem no orçamento.' />
-                    <Card title='PLANO DE SAÚDE FAMILIAR E MEI' info='Planos familiares com até 40% menos para toda a sua família.' />
+                    <Card title='PLANO DE SAÚDE FAMILIAR E MEI' info='Planos familiares com até 40% a menos para toda a sua família.' />
                     <Card title='PLANO DE SAÚDE INDIVIDUAL' info='Uma linha ideal para profissionais e Adesão.' />
                     <Card title='OS MELHORES PLANOS ODONTOLÓGICOS' info='Sua saúde bucal nunca mais será a mesma.' />
                 </div>
