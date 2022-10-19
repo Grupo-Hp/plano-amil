@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
 export default function Contato(props) {
 
@@ -17,6 +18,7 @@ export default function Contato(props) {
     })
 
     const onChangeInput = e => setDataForm({ ...dataForm, [e.target.name]: e.target.value })
+    const router = useRouter()
 
     const sendContact = async e => {
         e.preventDefault()
@@ -25,9 +27,9 @@ export default function Contato(props) {
             await fetch('https://api.grupohp.com.br/send/amil', {
                 method: 'POST',
                 body: JSON.stringify(dataForm),
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
             })
-            alert('Dados enviado com sucesso!')
+            router.push('/send')
         } catch (error) {
             alert('Ocorreu um erro')
         }

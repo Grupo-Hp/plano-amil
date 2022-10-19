@@ -19,7 +19,7 @@ function Card(props) {
 
 export default function Cards(props) {
     return (
-        <div className="grid grid-cols-3 gap-x-10 gap-y-4 w-11/12 2xl:w-9/12 mx-auto py-36">
+        <div className="grid grid-cols-3 gap-x-10 gap-y-4 w-11/12 2xl:w-9/12 mx-auto py-10 lg:py-36">
             <Card icon={<MdAttachMoney />} title='valores dos planos de saúde rio de janeiro' info='Nossa equipe fornece a tabela de preços em minutos para você e sua empresa.' />
 
             <Card icon={<FaRegHospital />} title='redes credenciadas' info='Venha conhecer a rede credenciada da sua região.' />

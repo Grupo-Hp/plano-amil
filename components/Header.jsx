@@ -15,7 +15,7 @@ export default function Header() {
                             smooth={true}
                             offset={50}
                             duration={1000}
-                            className="mt-2 px-10 cursor-pointer py-3 font-medium text-md border-2 border-white text-white hover:bg-primary hover:border-primary rounded-xl leading-tight uppercase htransition duration-300 ease-in-out"
+                            className="mt-2 px-10 cursor-pointer py-3 font-medium text-md border-2 border-white text-white hover:bg-primary hover:border-primary rounded-xl leading-tight uppercase transition duration-300 ease-in-out"
                         >
                             preço rápido
                         </Link>
