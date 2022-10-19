@@ -16,7 +16,7 @@ export default function SendPage() {
                     <p className='text-2xl'>Em breve, sua simulação será encaminhada via e-mail, whatsapp ou telefone por um dos nossos corretores.</p>
                     <p className='text-xl mt-5 mb-16'>LIGUE AGORA PARA COTAÇÃO VIA TELEFONE:&nbsp;(21) 4040-4148
                     </p>
-                    <a href="/" className='uppercase font-semibold bg-yellow-500 px-10 py-3 rounded-lg border-2 border-secondary text-secondary hover:bg-secondary hover:text-white duration-300'>Página inicial</a>
+                    <a href="./" className='uppercase font-semibold bg-yellow-500 px-10 py-3 rounded-lg border-2 border-secondary text-secondary hover:bg-secondary hover:text-white duration-300'>Página inicial</a>
                 </div>
             </header>
             <Footer />
