@@ -32,6 +32,15 @@ export default function Info1() {
                     </div>
                 </div>
             </div>
+            <div className="lg:hidden">
+                <Image
+                    src="/images/imageInfo1.jpg"
+                    layout='responsive'
+                    width={150}
+                    height={100}
+                    alt="Logo da Amil dental"
+                />
+            </div>
         </div>
     )
 }

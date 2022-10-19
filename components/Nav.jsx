@@ -23,7 +23,7 @@ export default function Nav() {
                             </div>
                             <div className="hidden xl:block">
                                 <div className="ml-10 flex items-baseline space-x-10 uppercase">
-                                    <a href="./contato"
+                                    <a href="/"
                                         className=' font-medium hover:text-primary cursor-pointer text-slate-800'
                                     >
                                         inicio
