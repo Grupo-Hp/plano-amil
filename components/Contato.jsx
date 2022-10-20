@@ -1,32 +1,23 @@
-import { useState } from 'react'
 import Image from "next/image";
 import { useRouter } from 'next/router'
+import { useForm } from "react-hook-form";
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup';
 
 export default function Contato(props) {
 
-    const [dataForm, setDataForm] = useState({
-        empresa: 'Amil',
-        imagem: 'Hpcap',
-        site: 'https://www.hpcap.com.br/',
-        nome: '',
-        sobrenome: '',
-        email: '',
-        telefone: '',
-        cidade: '',
-        tipo: '',
-        forma: ''
-    })
-
-    const onChangeInput = e => setDataForm({ ...dataForm, [e.target.name]: e.target.value })
     const router = useRouter()
 
-    const sendContact = async e => {
-        e.preventDefault()
+    const Obrigatorio = props => {
+        <span className="text-red-500">{props.valor}</span>
+    }
+
+    const sendContact = async data => {
 
         try {
             await fetch('https://api.grupohp.com.br/send/amil', {
                 method: 'POST',
-                body: JSON.stringify(dataForm),
+                body: JSON.stringify(data),
                 headers: { 'Content-Type': 'application/json' },
             })
             router.push('/send')
@@ -35,9 +26,49 @@ export default function Contato(props) {
         }
     }
 
+    const shape = yup.object().shape({
+        nome: yup
+            .string()
+            .required('O nome é obrigatório'),
+
+        sobrenome: yup
+            .string()
+            .required('O sobrenome é obrigatório'),
+
+        email: yup
+            .string()
+            .email('Insira um e-mail válido')
+            .required('O e-mail é obrigatório'),
+
+        telefone: yup
+            .string()
+            .required('Isira um número de contato'),
+
+        cidade: yup
+            .string()
+            .required('O nome da cidade é obrigatório'),
+
+        tipo: yup
+            .string()
+            .required('Informe um tipo de plano'),
+
+        forma: yup
+            .string()
+            .required('Informe a melhor forma de contato'),
+    })
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(shape),
+        defaultValues: {
+            empresa: 'Amil',
+            imagem: 'Hpcap',
+            site: 'https://www.hpcap.com.br/',
+        }
+    });
+
     return (
         <div id='contato' className={`p-8 contatoImage1 flex items-center ${props.height}`}>
-            <div className="mx-auto grid grid-cols-2 lg:w-10/12">
+            <div className="mx-auto grid grid-cols-2 lg:w-11/12">
                 <div className={`col-span-2 mb-28 text-white text-center ${props.display}`}>
                     <h2 className='text-4xl font-bold mb-5'>Cotação de Planos de Saúde Rio de Janeiro.
                         Preço na Hora!</h2>
@@ -71,26 +102,39 @@ export default function Contato(props) {
                 <div className="col-span-2 lg:col-span-1">
                     <h4 className='text-4xl font-bold text-white pb-3 text-center'>Preço Rápido</h4>
                     <p className='text-xl font-bold text-white text-center mb-5'>Estamos dispostos a mostrar os valores dos Planos de Saúde na palma da sua mão em minutos.</p>
-                    <form onSubmit={sendContact}>
+                    <form onSubmit={handleSubmit(sendContact)}>
 
                         <div className="form-group mb-6 grid grid-cols-2 gap-4">
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="nome" onChange={onChangeInput} value={dataForm.nome} placeholder="Digite seu nome*" />
+                            <div>
+                                <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" {...register('nome')} placeholder="Digite seu nome*" />
+                                <p className="text-red-500 ml-3 mt-1">{errors?.nome?.message}</p>
+                            </div>
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="sobrenome" onChange={onChangeInput} value={dataForm.sobrenome} placeholder="Digite seu sobrenome*" />
+                            <div>
+                                <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" {...register('sobrenome')} placeholder="Digite seu sobrenome*" />
+                                <p className="text-red-500 ml-3 mt-1">{errors?.sobrenome?.message}</p>
+                            </div>
                         </div>
 
 
                         <div className="form-group mb-6">
-                            <input type="text" className="rounded-xl form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="email" onChange={onChangeInput} value={dataForm.email} placeholder="Digite seu e-mail*" />
+                            <input type="email" className="rounded-xl form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" {...register('email')} placeholder="Digite seu e-mail*" />
+                            <p className="text-red-500 ml-3 mt-1">{errors?.email?.message}</p>
                         </div>
 
 
                         <div className="grid grid-cols-2 gap-4 form-group mb-6">
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="telefone" onChange={onChangeInput} value={dataForm.telefone} placeholder="Digite seu principal telefone*" />
+                            <div>
+                                <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" {...register('telefone')} placeholder="Digite seu principal telefone*" />
+                                <p className="text-red-500 ml-3 mt-1">{errors?.telefone?.message}</p>
+                            </div>
 
-                            <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" name="cidade" onChange={onChangeInput} value={dataForm.cidade} placeholder="Digite a cidade onde mora*" />
+                            <div>
+                                <input type="text" className="rounded-xl col-span-2 md:col-span-1 form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" {...register('cidade')} placeholder="Digite a cidade onde mora*" />
+                                <p className="text-red-500 ml-3 mt-1">{errors?.cidade?.message}</p>
+                            </div>
 
                         </div>
 
@@ -98,31 +142,33 @@ export default function Contato(props) {
 
                             <div className="flex col-span-2 md:col-span-1">
                                 <div className="w-full">
-                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='tipo' value={dataForm.tipo} onChange={onChangeInput}>
+                                    <select {...register('tipo')} className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example">
                                         <option defaultValue>Tipo de Plano:</option>
                                         <option value="Individual/Adesão">Individual ou adesão</option>
                                         <option value="Familiar">Familiar</option>
                                         <option value="Empresarial">Empresarial</option>
                                         <option value="Odontológico">Odontológico</option>
                                     </select>
+                                    <p className="text-red-500 ml-3 mt-1">{errors?.tipo?.message}</p>
                                 </div>
                             </div>
                             <div className="flex col-span-2 md:col-span-1">
                                 <div className="mb-3 w-full">
-                                    <select className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example" name='forma' value={dataForm.forma} onChange={onChangeInput}>
+                                    <select {...register('forma')} className="rounded-xl form-select block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-secondary  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary-20 focus:outline-none" aria-label="Default select example">
                                         <option defaultValue>Melhor Forma de Simulação:</option>
                                         <option value="Online">Online</option>
                                         <option value="WhatsApp">WhatsApp</option>
                                         <option value="Telefone">Telefone</option>
                                         <option value="E-mail">E-mail</option>
                                     </select>
+                                    <p className="text-red-500 ml-3 mt-1">{errors?.forma?.message}</p>
                                 </div>
                             </div>
                         </div>
 
 
                         <div className="form-group mb-6">
-                            <button type="submit" className="mt-2 w-full px-6 py-2.5 font-medium text-lg border border-secondary text-secondary hover:text-white rounded-xl bg-white leading-tight uppercase hover:bg-primary-10 hover:bg-secondary transition duration-300 ease-in-out">{props.button}</button>
+                            <button type="submit" className="w-full px-6 py-2.5 font-medium text-lg border border-secondary text-secondary hover:text-white rounded-xl bg-white leading-tight uppercase hover:bg-primary-10 hover:bg-secondary transition duration-300 ease-in-out">{props.button}</button>
                         </div>
                     </form>
                 </div>
