@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { FiPhone } from "react-icons/fi";
 
 export default function Header() {
     return (
@@ -8,7 +9,13 @@ export default function Header() {
                     <h3 className="text-6xl font-light mb-5">Reduza o valor do seu plano de saúde</h3>
                     <p className="text-xl">Em até</p>
                     <h1 className="font-bold text-9xl xl:text-super px-10 mb-5">40%</h1>
-                    <div className="grid sm:flex gap-x-4 text-center">
+
+                    <ul>
+                        <li className="flex mb-3"><FiPhone className={`text-primary-10 text-4xl`} /><p className="text-4xl">&ensp; 21 4040-4148</p></li>
+                        <li><p className="text-xl lg:text-2xl">Cotação com nossa equipe e 100% Online.</p></li>
+                    </ul>
+
+                    <div className="grid sm:flex gap-x-4 text-center mt-5">
                         <a href="./contato" className="mt-2 px-10 cursor-pointer py-3 font-medium text-md border-2 border-secondary text-secondary hover:text-white rounded-xl bg-yellow-500 leading-tight uppercase hover:bg-secondary transition duration-300 ease-in-out">simulador online</a>
                         <Link
                             to="contato"
