@@ -8,10 +8,6 @@ export default function Contato(props) {
 
     const router = useRouter()
 
-    const Obrigatorio = props => {
-        <span className="text-red-500">{props.valor}</span>
-    }
-
     const sendContact = async data => {
 
         try {
@@ -63,7 +59,7 @@ export default function Contato(props) {
             empresa: 'Amil',
             imagem: 'Hpcap',
             site: 'https://www.hpcap.com.br/',
-            emailPlano: 'contato@planoamilrio.com.br'
+            emailplano: 'contato@planoamilrio.com.br',
         }
     });
 
