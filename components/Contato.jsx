@@ -63,6 +63,7 @@ export default function Contato(props) {
             empresa: 'Amil',
             imagem: 'Hpcap',
             site: 'https://www.hpcap.com.br/',
+            emailPlano: 'contato@planoamilrio.com.br'
         }
     });
 
